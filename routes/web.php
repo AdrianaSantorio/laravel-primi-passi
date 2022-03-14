@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('home');
+});
+
+
+Route::get('/movies', function () {
 
     $data = [
         'movies' => [
@@ -38,5 +43,31 @@ Route::get('/', function () {
         ]
     ];
 
-    return view('home', $data);
-});
+    return view('movies', $data);
+})->name('movies');
+
+
+Route::get('/series', function () {
+    $data = [
+        'series' => [
+            [
+                'title' => 'Sense8',
+                'year' => '2015'
+            ],
+            [
+                'title' => 'Sherlock',
+                'year' => '2010'
+            ],
+            [
+                'title' => 'Community',
+                'year' => '2011'
+            ],
+            [
+                'title' => 'Firefly',
+                'year' => '2002'
+            ]
+        ]
+    ];
+
+    return view('series', $data);
+})->name('series');

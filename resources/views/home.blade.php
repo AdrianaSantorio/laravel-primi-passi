@@ -9,14 +9,12 @@
 </head>
 
 <body>
-    <h1>Movies</h1>
-    <ul>
-        @foreach($movies as $movie)
-        <li>{{$movie['title']}} , {{$movie['year']}}</li>
-        @endforeach
-    </ul>
-
-
+    <header>
+        <h1>Hello World</h1>
+        <hr>
+        <a href="{{route('movies')}}"> Film</a>
+        <a href="{{route('series')}}"> Serie tv</a>
+    </header>
 </body>
 
 </html>
