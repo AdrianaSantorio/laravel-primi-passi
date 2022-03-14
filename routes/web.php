@@ -14,5 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $data = [
+        'movies' => [
+            [
+                'title' => 'The producers',
+                'year' => '1967'
+            ],
+            [
+                'title' => 'Willy Wonka and the chocolate factory',
+                'year' => '1971'
+            ],
+            [
+                'title' => 'Young Frankenstain',
+                'year' => '1974'
+            ],
+
+            [
+                'title' => 'The World\'s Greatest Lover',
+                'year' => '1977'
+            ],
+
+        ]
+    ];
+
+    return view('home', $data);
 });
